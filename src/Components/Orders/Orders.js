@@ -33,7 +33,7 @@ const Orders = () => {
             
             {
                 orders.map((order, index) =>
-                    <div className="jumbotron w-50 mx-auto mb-0" key={index}>
+                    <div className="jumbotron w-50 mx-auto my-3 py-3" key={index}>
                         <h2 className="text-capitalize mb-3">{order.name}</h2>
                         <h4>Price: ${order.price}</h4>
                         <h4>Quantity: {order.weight}Kg</h4>
