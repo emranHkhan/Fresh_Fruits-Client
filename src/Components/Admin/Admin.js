@@ -8,7 +8,7 @@ const Admin = () => {
     return (
         <div className="row">
             <div className="col-md-3 bg-secondary">
-                <div className="d-flex justify-content-between mt-4">
+                <div className="d-flex flex-column justify-content-between mt-4">
 
                     {
                         isAddShown ? <button onClick={() => setIsAddShown(true)} className="border-0 text-dark h2 py-2 ml-2 bg-light">Add Prodcut</button> :
