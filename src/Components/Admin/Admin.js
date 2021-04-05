@@ -17,20 +17,18 @@ const Admin = () => {
                     }
 
                     {
-                        isAddShown ? <button onClick={() => setIsAddShown(false)} className="border-0 text-light h2 py-2 ml-2 bg-transparent">Delete Prodcut</button> :  <button onClick={() => setIsAddShown(false)} className="border-0 text-dark h2 py-2 ml-2 bg-light">Delete Prodcut</button>
-                        
-                    }
+                        isAddShown ? <button onClick={() => setIsAddShown(false)} className="border-0 text-light h2 py-2 ml-2 bg-transparent">Delete Prodcut</button> : <button onClick={() => setIsAddShown(false)} className="border-0 text-dark h2 py-2 ml-2 bg-light">Delete Prodcut</button>
 
+                    }
 
                 </div>
             </div>
-            <div className="col"></div>
 
-
-            {
-                isAddShown ? <AddProducts /> : <DeleteProduct />
-            }
-
+            <div className="col-md-9">
+                {
+                    isAddShown ? <AddProducts /> : <DeleteProduct />
+                }
+            </div>
         </div>
     );
 };
