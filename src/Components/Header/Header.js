@@ -31,7 +31,7 @@ const Header = () => {
                         loggedInUser.email ? <p style={{ marginTop: '10px', color: 'white', fontWeight: 'bold' }}>{loggedInUser.name}</p> :
                             <Nav.Link as={Link} to="/login">
                                 Login
-                    </Nav.Link>
+                            </Nav.Link>
                     }
 
                 </Nav>

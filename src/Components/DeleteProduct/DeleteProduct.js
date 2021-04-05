@@ -19,7 +19,7 @@ const DeleteProduct = () => {
             .then(res => res.text())
             .then(data => {
                 e.target.parentNode.parentNode.parentNode.parentNode.style.display = 'none';
-                console.log(data);
+               
             })
 
     }
@@ -45,8 +45,6 @@ const DeleteProduct = () => {
                                 <td>${item.price}</td>
                                 <td><button onClick={(e) => handleDelete(item._id, e)} className="bg-danger text-white border-0 rounded"><FontAwesomeIcon icon={faTrashAlt} /></button></td>
                             </tr>
-
-
                         </tbody>
                     )
                 }

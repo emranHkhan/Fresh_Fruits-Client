@@ -10,7 +10,6 @@ const Orders = () => {
         fetch('https://rocky-eyrie-30479.herokuapp.com/orders?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setOrders(data)
             })
     }, [loggedInUser.email])
@@ -23,7 +22,6 @@ const Orders = () => {
             .then(res => res.text())
             .then(data => {
                 e.target.parentNode.style.display = 'none';
-                console.log(data)
             })
 
     }
