@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 
 const CheckOut = () => {
@@ -16,10 +15,11 @@ const CheckOut = () => {
             body: JSON.stringify(checkoutItem)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data);
+                alert('Product is added to the cart')
+            })
     }
-
-
 
 
     return (
@@ -46,11 +46,11 @@ const CheckOut = () => {
 
             </div>
             <div className="text-right">
-                <Link to="/orders">
-                    <button type="button" onClick={handleCheckOut} className="btn btn-success">
-                        CheckOut
+
+                <button type="button" onClick={handleCheckOut} className="btn btn-success">
+                    CheckOut
                 </button>
-                </Link>
+
             </div>
 
         </div>

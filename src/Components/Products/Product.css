@@ -1,6 +1,4 @@
 .my-card {
-    width: 200px;
-    
     border-radius: 0.6em;
     text-align: center;
     cursor: pointer;
@@ -21,18 +19,16 @@
 
 .img-container img {
     display: block;
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 70%;
+    max-height: 100%;
     object-fit: cover;
     padding: 10px 10px;
-   
+    margin: 0 auto;
 }
 
 
 #card {
-    /* background-color: #283593; */
-    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     height: 350px;
     
 }

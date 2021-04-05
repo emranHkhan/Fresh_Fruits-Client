@@ -24,7 +24,7 @@ const Products = ({ product }) => {
     return (
         <div className="col-md-4 mb-3">
         
-            <div className="card my-card mt-5 d-flex justify-content-between" id='card'>
+            <div className="card my-card mt-5 d-flex justify-content-between" id='card' style={{width: '18rem'}}>
                 <div className="img-container">
                     <img className="card-img-top" src={product.imageURL} alt="" />
                 </div>
@@ -41,7 +41,7 @@ const Products = ({ product }) => {
                 </div>
 
                 <div className="btn-container">
-                    <button onClick={() => handlePurchase(product.name)} type="button" className="btn btn-info btn-lg btn-block">Buy Now</button>
+                    <button onClick={() => handlePurchase(product.name)} type="button" className="btn btn-dark btn-lg btn-block">Buy Now</button>
 
                 </div>
             </div>
