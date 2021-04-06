@@ -28,7 +28,7 @@ const Header = () => {
                     </Nav.Link>
 
                     {
-                        loggedInUser.email ? <p style={{ marginTop: '6px', color: 'white', fontWeight: 'bold' }}>{loggedInUser.name}</p> :
+                        loggedInUser.email ? <p style={{ marginTop: '6.5px', color: 'white', fontWeight: 'bold' }}>{loggedInUser.name}</p> :
                             <Nav.Link as={Link} to="/login" className='link'>
                                 Login
                             </Nav.Link>
