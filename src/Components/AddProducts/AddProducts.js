@@ -35,7 +35,7 @@ const AddProducts = () => {
 
 
     const handlImageUpload = (event) => {
-        setMessage(event.target.files[0]);
+        setMessage(event.target.files[0].name);
         setIsTrue(false);
 
         const imageData = new FormData();
