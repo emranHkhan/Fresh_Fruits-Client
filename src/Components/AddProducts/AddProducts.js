@@ -6,9 +6,11 @@ import './AddProducts.css';
 const AddProducts = () => {
     const { register, handleSubmit } = useForm();
     const [imageURL, setImageURL] = useState(null);
-   
+    const [isTrue, setIsTrue] = useState(true);
+
     const onSubmit = (data, e) => {
         e.target.reset();
+
         const eventData = {
             name: data.product,
             price: data.price,
@@ -31,6 +33,8 @@ const AddProducts = () => {
 
     const handlImageUpload = (event) => {
         console.log(event.target.files[0]);
+        setIsTrue(false);
+
         const imageData = new FormData();
         imageData.set('key', '28050dc0d4fe7e20fd4f2fdb0ab064f0');
         imageData.append('image', event.target.files[0])
@@ -38,6 +42,7 @@ const AddProducts = () => {
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
                 setImageURL(response.data.data.display_url);
+                setIsTrue(true);
             })
             .catch(function (error) {
                 console.log(error);
@@ -75,9 +80,18 @@ const AddProducts = () => {
                         </label>
                     </div>
 
-                    <div className="text-right">
-                        <button type="submit" className="btn btn-outline-info btn-block">Save</button>
-                    </div>
+                    {
+                        isTrue ?
+                            <div className="text-right">
+                                <button type="submit" className="btn btn-outline-info btn-block">Save</button>
+                            </div>
+                            :
+                            <div className="spinner-border text-primary spinner-2" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </div>
+                    }
+
+
                 </div>
 
             </form>

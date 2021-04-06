@@ -50,3 +50,9 @@ input:focus {
 #imageUpload {
     opacity: 0;
   }
+
+.spinner-2 {
+    position: relative;
+    bottom: 10px;
+    left: 170px;
+}
