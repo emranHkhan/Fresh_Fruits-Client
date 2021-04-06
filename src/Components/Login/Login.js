@@ -35,9 +35,9 @@ const Login = () => {
     }
 
     return (
-        <div className="text-center w-50 mx-auto my-5 bg-info p-5 rounded">
+        <div className="text-center w-50 mx-auto my-5 bg-dark p-5 rounded">
             <h1 className="text-white mb-5">Please! Log In.</h1>
-            <button type="button" className="btn btn-success btn-lg" onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faEnvelope} /> Sign In With Google</button>
+            <button type="button" className="btn btn-light btn-lg" onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faEnvelope} /> Sign In With Google</button>
 
         </div>
     );
