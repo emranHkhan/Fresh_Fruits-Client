@@ -10,7 +10,8 @@ const AddProducts = () => {
 
     const onSubmit = (data, e) => {
         e.target.reset();
-
+        alert('Product is added to the Home page');
+        
         const eventData = {
             name: data.product,
             price: data.price,
