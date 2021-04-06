@@ -7,11 +7,13 @@ const AddProducts = () => {
     const { register, handleSubmit } = useForm();
     const [imageURL, setImageURL] = useState(null);
     const [isTrue, setIsTrue] = useState(true);
+    const [message, setMessage] = useState('');
 
     const onSubmit = (data, e) => {
         e.target.reset();
         alert('Product is added to the Home page');
-        
+        setMessage('');
+
         const eventData = {
             name: data.product,
             price: data.price,
@@ -33,7 +35,7 @@ const AddProducts = () => {
 
 
     const handlImageUpload = (event) => {
-        console.log(event.target.files[0]);
+        setMessage(event.target.files[0]);
         setIsTrue(false);
 
         const imageData = new FormData();
@@ -79,6 +81,11 @@ const AddProducts = () => {
                             <input type="file" onChange={handlImageUpload} />
                             Add Photo
                         </label>
+
+                        {
+                            message && <small className="ml-2">{message} is selected.</small>
+                        }
+
                     </div>
 
                     {

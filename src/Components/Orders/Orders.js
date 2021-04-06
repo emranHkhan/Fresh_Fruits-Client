@@ -12,7 +12,7 @@ const Orders = () => {
             .then(data => {
                 setOrders(data)
             })
-    }, [loggedInUser.email, orders])
+    }, [loggedInUser.email, orders.length])
 
     const handleRemoveItems = (e, id) => {
 
