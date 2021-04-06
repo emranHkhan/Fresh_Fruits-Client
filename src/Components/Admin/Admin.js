@@ -7,7 +7,7 @@ const Admin = () => {
 
     return (
         <div className="row">
-            <div className="col-md-3 bg-secondary">
+            <div className="col-md-3 bg-dark">
                 <div className="d-flex flex-column justify-content-between mt-4">
 
                     {

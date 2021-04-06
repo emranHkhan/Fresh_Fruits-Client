@@ -1,28 +1,3 @@
-.nav-links ul {
-    display: flex;
-    list-style: none;
-    
-    padding: 0;
-    margin: 10px;
-   
-}
-
-/* .nav-links ul li {
-    margin-right: 40px;
-    font-size: 1.5rem;
-} */
-
-/* .logo {
-    width: 20%;
-} */
-
-.nav-links {
-    width: 60%;
-    display: flex;
-   
-}
-
-nav a {
-    font-size: 1.1rem;
-    font-weight: bold;
+.link {
+    font-family: 'Montserrat', sans-serif;
 }
