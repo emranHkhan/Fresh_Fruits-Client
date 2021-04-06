@@ -35,7 +35,7 @@ const Orders = () => {
                         <h2 className="text-capitalize mb-3">{order.name}</h2>
                         <h4>Price: ${order.price}</h4>
                         <h4>Quantity: {order.weight}Kg</h4>
-                        <h4 className="text-nowrap">Order Time: {order.date}</h4>
+                        <h4 className="text-nowrap">Order Time: {order.date.substring(0, 10)}</h4>
                         <button className="btn btn-danger mt-3" onClick={(e) => handleRemoveItems(e, order._id)}>Remove item</button>
                         <hr className="my-4" />
                     </div>
