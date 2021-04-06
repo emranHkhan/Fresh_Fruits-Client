@@ -12,7 +12,7 @@ const Orders = () => {
             .then(data => {
                 setOrders(data)
             })
-    }, [loggedInUser.email])
+    }, [loggedInUser.email, orders])
 
     const handleRemoveItems = (e,id) => {
         
@@ -28,7 +28,7 @@ const Orders = () => {
 
     return (
         <div>
-            
+            <h1 className="text-center mt-3">Total Orders: {orders.length}</h1>
             {
                 orders.map((order, index) =>
                     <div className="jumbotron w-50 mx-auto my-3 py-3" key={index}>
