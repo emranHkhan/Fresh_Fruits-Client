@@ -15,7 +15,8 @@ const Products = ({ product }) => {
             ...itemInfo,
             name: product.name,
             price: product.price,
-            weight: product.weight
+            weight: product.weight,
+            image: product.imageURL
         }
 
         setItemInfo(newitemInfo);
