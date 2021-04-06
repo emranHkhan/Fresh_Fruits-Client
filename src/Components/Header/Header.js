@@ -10,7 +10,7 @@ const Header = () => {
     const [loggedInUser, setLoggedInUser] = value1;
     return (
 
-        <Navbar collapseOnSelect expand="md" bg="info" variant="dark">
+        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
             <Navbar.Brand>
                 <Link to="/" style={{ textDecoration: 'none', color: 'white', fontWeight: 'bold', fontSize: '1.5rem', fontFamily: 'Montserrat, sans-serif' }}>Fresh Fruits</Link>
             </Navbar.Brand>
