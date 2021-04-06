@@ -14,8 +14,8 @@ const Home = () => {
 
 
     return (
-        <div className="container">
-            <div className="row ml-5 pb-2">
+        <div className="container-fluid">
+            <div className="row mx-auto pb-2">
                 {
                     products.length === 0 && <div className="spinner-border text-primary spinner" role="status">
                         <span className="sr-only">Loading...</span>

@@ -22,7 +22,7 @@ const Products = ({ product }) => {
     }
 
     return (
-        <div className="col-md-4 mb-3">
+        <div className="col-md-4 mb-3 d-flex justify-content-center">
         
             <div className="card my-card mt-5 d-flex justify-content-between" id='card' style={{width: '18rem'}}>
                 <div className="img-container">
