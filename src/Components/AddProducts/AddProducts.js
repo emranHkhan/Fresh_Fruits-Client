@@ -15,7 +15,7 @@ const AddProducts = () => {
         alert('Product is added to the Home page');
         
 
-        const eventData = {
+        const productData = {
             name: data.product,
             price: data.price,
             weight: data.weight,
@@ -23,12 +23,12 @@ const AddProducts = () => {
         };
 
         const url = 'https://rocky-eyrie-30479.herokuapp.com/addProduct';
-        console.log(eventData);
+        console.log(productData);
 
         fetch(url, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify(eventData)
+            body: JSON.stringify(productData)
         })
             .then(res => console.log(res))
 
