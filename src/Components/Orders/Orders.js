@@ -5,6 +5,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const { value1 } = useContext(UserContext);
     const [loggedInUser, setLoggedInUser] = value1;
+    const [isRemoved, setIsRemoved] = useState(true);
 
     useEffect(() => {
         fetch('https://rocky-eyrie-30479.herokuapp.com/orders?email=' + loggedInUser.email)
@@ -12,7 +13,7 @@ const Orders = () => {
             .then(data => {
                 setOrders(data)
             })
-    }, [loggedInUser.email, orders])
+    }, [loggedInUser.email, isRemoved])
 
     const handleRemoveItems = (e, id) => {
 
@@ -22,6 +23,7 @@ const Orders = () => {
             .then(res => res.text())
             .then(data => {
                 e.target.parentNode.parentNode.style.display = 'none';
+                setIsRemoved(!isRemoved);
             })
 
     }
